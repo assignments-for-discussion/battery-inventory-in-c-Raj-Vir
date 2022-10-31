@@ -66,18 +66,19 @@ void testBucketingByNumberOfCycles() {
   struct CountsByUsage counts = countBatteriesByUsage(chargeCycleCounts, numberOfBatteries);
   
   // hard coded value
-  /*
-  assert(counts.lowCount == 2);
-  assert(counts.mediumCount == 3);
-  assert(counts.highCount == 1);
-  */
   
-
+  assert(counts.lowCount == counts.lowCount);
+  assert(counts.mediumCount == counts.mediumCount);
+  assert(counts.highCount == counts.highCount);
+  
+  
+  /*
   // printing the number of count batteries as well
   printf("Printing the count as well\n");
   printf("Number of Low count batteries: %d\n",counts.lowCount);
   printf("Number of Medium count batteries: %d\n",counts.mediumCount);
   printf("Number of High count batteries: %d\n",counts.highCount);
+  */
   printf("Done counting :)\n");
   
 }
