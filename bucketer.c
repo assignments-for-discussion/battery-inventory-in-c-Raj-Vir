@@ -67,9 +67,9 @@ void testBucketingByNumberOfCycles() {
   
   // hard coded value
   
-  assert(counts.lowCount == counts.lowCount);
-  assert(counts.mediumCount == counts.mediumCount);
-  assert(counts.highCount == counts.highCount);
+  assert(counts.lowCount == 2);
+  assert(counts.mediumCount == 3);
+  assert(counts.highCount == 1);
   
   
   /*
