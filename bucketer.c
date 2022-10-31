@@ -41,46 +41,27 @@ struct CountsByUsage countBatteriesByUsage(const int* cycles, int nBatteries) {
     // checks the status of Battery if it is less than 410 then Low is printed
     else if(cycles[i]<410){
       counts.lowCount++;
-      printf("Low\n");
     }
 
     // else if it is greater than 410  and less 949 than then Medium is printed
     else if(cycles[i]>= 410 and cycles[i]<=949){
       counts.mediumCount++;
-      printf("Medium\n");
+      
     }
 
     // else if it is greater than 950 than then High is printed
     else if(cycles[i]>=950){
       counts.highCount++;
-      printf("High\n");
     }
   }
   return counts;
 }
 
 void testBucketingByNumberOfCycles() {
-  int numberOfBatteries;
-  // allowing user to enter the number of battery levels
-  printf("Enter the number of battery levels you want to enter: ");
-  scanf("%d",&numberOfBatteries);
-
-  // dynamically allocation of array chargeCycleCounts
-  int *chargeCycleCounts;
-  chargeCycleCounts = (int *)malloc(numberOfBatteries*sizeof(int));
   
-  // if memory is not allocated
-  if(chargeCycleCounts==NULL){
-    printf("Dynamic Allocation failed\n");
-    exit(0);
-  }
+  const int chargeCycleCounts []={100, 300, 500, 600, 900, 1000};
+  const int numberOfBatteries= sizeof(chargeCycleCounts)/sizeof(int);
 
-
-  // taking values from user
-  printf("Enter the battery levels now: \n");
-  for(int i=0;i<numberOfBatteries;i++){
-    scanf("%d",&chargeCycleCounts[i]);
-  }
   printf("Counting batteries by usage cycles...\n");
 
   // count variable will contain all the battery count with different levels
@@ -100,17 +81,10 @@ void testBucketingByNumberOfCycles() {
   printf("Number of Medium count batteries: %d\n",counts.mediumCount);
   printf("Number of High count batteries: %d\n",counts.highCount);
   printf("Done counting :)\n");
-  // freeing the dynamically allocated space after counting is done
-  free(chargeCycleCounts);
+  
 }
 
 int main() {
-  // number of test cases
-  int t;
-  printf("Enter the Number of test cases:\n");
-  scanf("%d",&t);
-  // looping till test cases are finished
-  while(t--)
-    testBucketingByNumberOfCycles();
+  testBucketingByNumberOfCycles();
   return 0;
 }
