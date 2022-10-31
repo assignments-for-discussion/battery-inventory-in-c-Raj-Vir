@@ -1,17 +1,15 @@
 //===========================================================================================================
 // Input: Number of test Cases t, size of array numberOfBatteries, enter the levels chargeCycleCounts
-// Output: printing the level indication (low, medium and high) and count
+// Output: printing the level count
 //===========================================================================================================
 // Sample testcases: 
-/*2-> number of test cases
-  4 -> size
+/* Tested for different arrays
   50 -1 1100 500 -> array
-  3
   200 600 100
+  100, 300, 500, 600, 900, 1000
 */
 //===========================================================================================================
 #include <stdio.h>
-#include <stdlib.h> // for dynamic allocation of memory
 #include <assert.h>
 
 // structure definition consiting of 3 fields lowCount, mediumCount, highCount
