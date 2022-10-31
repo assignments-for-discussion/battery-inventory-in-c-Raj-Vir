@@ -92,15 +92,15 @@ void testBucketingByNumberOfCycles() {
   assert(counts.mediumCount == 3);
   assert(counts.highCount == 1);
   */
-  printf("Done counting :)\n");
+  
 
   // printing the number of count batteries as well
   printf("Printing the count as well\n");
   printf("Number of Low count batteries: %d\n",counts.lowCount);
   printf("Number of Medium count batteries: %d\n",counts.mediumCount);
   printf("Number of High count batteries: %d\n",counts.highCount);
-
-  // freeing the dynamically allocated values
+  printf("Done counting :)\n");
+  // freeing the dynamically allocated space after counting is done
   free(chargeCycleCounts);
 }
 
